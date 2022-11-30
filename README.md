@@ -4,6 +4,9 @@ Customers and product owners often want all four from the following list of four
 
 Demo: https://calculate.crnw.uk
 
+## License
+
+Feel free to use however you wish but keep the footer link.
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:

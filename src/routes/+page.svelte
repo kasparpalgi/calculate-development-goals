@@ -84,6 +84,6 @@
 		</div>
 	</div>
     <p>&nbsp;</p>
-	<p>Built with ❤️ using SvelteKit. <a class="text-blue-500" href="https://github.com/crewnew-git/calculate-development-goals">Code in GitHub>></a></p>
+	<p>Built with ❤️ using SvelteKit by <a  class="text-blue-500" href="https://crewnew.com">@kaspar from CrewNew</a>. See the <a class="text-blue-500" href="https://github.com/crewnew-git/calculate-development-goals">code in GitHub>></a></p>
 	<p>&nbsp;</p>
 </div>
