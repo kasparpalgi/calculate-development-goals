@@ -4,14 +4,10 @@
 	let speed: number = 75;
 	let cost: number = 75;
 	let done: number = 75;
-	let minCost: number = 8000;
-	let maxCost: number = 15000;
 	let projectSize: number = 15;
 
-	function reCalculateSize() {
-		minCost = Math.round(270 * (projectSize * 2));
-		maxCost = Math.round(400 * (projectSize * 2.5));
-	}
+	$: minCost = Math.round(270 * (projectSize * 2));
+	$: maxCost = Math.round(400 * (projectSize * 2.5));
 
 	function reCalculateQuality() {
 		tooMuch = (quality + speed + cost + done - 300) / 3;
@@ -75,7 +71,6 @@
 		bind:value={projectSize}
 		class="range"
 		step="1"
-		on:change={reCalculateSize}
 	/>
 	<div class="w-full flex justify-between text-xs px-2">
 		<span>Small</span>
