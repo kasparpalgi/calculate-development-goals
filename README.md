@@ -2,7 +2,7 @@
 
 Customers and product owners often want all four from the following list of four qualities but you can pick only three. Or give up a little from all of them or any other combinations. That’s a fundamental law of any project (not just a software development project). Read more here: Agile Software Craftsmanship by Uncle Bob: https://medium.com/crewnew-com/agile-software-craftsmanship-by-uncle-bob-377882b3d8b
 
-Demo: https://calculate.crnw.uk
+Live in server: https://calculate-development-goals.vercel.app/
 
 ## License
 
