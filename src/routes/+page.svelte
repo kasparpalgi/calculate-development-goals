@@ -2,6 +2,7 @@
 	let tooMuch: number = 0;
 	let quality: number = 75;
 	let speed: number = 75;
+	let speedLocked: boolean = false;
 	let cost: number = 75;
 	let done: number = 75;
 	let projectSize: number = 15;
@@ -11,7 +12,9 @@
 
 	function reCalculateQuality() {
 		tooMuch = (quality + speed + cost + done - 300) / 3;
-		speed -= tooMuch;
+		if (!speedLocked) {
+		}
+
 		cost -= tooMuch;
 		done -= tooMuch;
 	}
@@ -64,14 +67,7 @@
 	</p>
 	<p>&nbsp;</p>
 	<p class="text-xl font-bold">PROJECT SIZE (average cost €{minCost} - €{maxCost})</p>
-	<input
-		type="range"
-		min="1"
-		max="100"
-		bind:value={projectSize}
-		class="range"
-		step="1"
-	/>
+	<input type="range" min="1" max="100" bind:value={projectSize} class="range" step="1" />
 	<div class="w-full flex justify-between text-xs px-2">
 		<span>Small</span>
 		<span>Medium</span>
@@ -100,7 +96,11 @@
 		</div>
 	</div>
 	<div class="mx-5 my-8 md:mx-20">
-		<p class="text-xl font-bold">SPEED</p>
+		<p class="text-xl font-bold">
+			SPEED
+			<!-- TODO: add possibility to lock values
+				&nbsp;&nbsp;&nbsp;<input type="checkbox" bind:checked={speedLocked} class="checkbox" /> <small>lock</small>-->
+		</p>
 		<input
 			type="range"
 			min="1"
@@ -130,10 +130,10 @@
 			on:change={reCalculateCost}
 		/>
 		<div class="w-full flex justify-between text-xs px-2">
-			<span>€{maxCost + (750 * 2)}</span>
+			<span>€{maxCost + 750 * 2}</span>
 			<span>€{maxCost}</span>
-			<span>€{Math.round((minCost + maxCost)/1.7)}</span>
-			<span>€{(minCost + maxCost)/2}</span>
+			<span>€{Math.round((minCost + maxCost) / 1.7)}</span>
+			<span>€{(minCost + maxCost) / 2}</span>
 			<span>€{minCost}</span>
 		</div>
 	</div>
