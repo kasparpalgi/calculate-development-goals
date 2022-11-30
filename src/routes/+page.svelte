@@ -41,7 +41,7 @@
 	<p>Customers and product owners often want all four from the following list of four qualities but you can pick only three. Or give up a little from all of them or any other combinations. That’s a fundamental law of any project (not just a software development project). Read more here: <a class="text-blue-500" href="https://medium.com/crewnew-com/agile-software-craftsmanship-by-uncle-bob-377882b3d8b">Agile Software Craftsmanship by Uncle Bob>></a></p>
 	<div class="mx-20 my-8">
         <p class="text-xl font-bold">QUALITY</p>
-		<input type="range" min="20" max="100" bind:value={quality} class="range" step="5" on:change={reCalculateQuality} />
+		<input type="range" min="1" max="100" bind:value={quality} class="range" step="1" on:change={reCalculateQuality} />
 		<div class="w-full flex justify-between text-xs px-2">
 			<span>Not working</span>
 			<span>Terrible</span>
@@ -52,7 +52,7 @@
 	</div>
     <div class="mx-20 my-8">
         <p class="text-xl font-bold">SPEED</p>
-		<input type="range" min="20" max="100" bind:value={speed} class="range" step="5" on:change={reCalculateSpeed} />
+		<input type="range" min="1" max="100" bind:value={speed} class="range" step="1" on:change={reCalculateSpeed} />
 		<div class="w-full flex justify-between text-xs px-2">
 			<span>DIY from free time</span>
 			<span>Takes ages</span>
@@ -63,7 +63,7 @@
 	</div>
     <div class="mx-20 my-8">
         <p class="text-xl font-bold">PRICE</p>
-		<input type="range" min="20" max="100" bind:value={cost} class="range" step="5" on:change={reCalculateCost} />
+		<input type="range" min="1" max="100" bind:value={cost} class="range" step="1" on:change={reCalculateCost} />
 		<div class="w-full flex justify-between text-xs px-2">
 			<span>Enterprice</span>
 			<span>Very expensive</span>
@@ -74,7 +74,7 @@
 	</div>
     <div class="mx-20 my-8">
         <p class="text-xl font-bold">DONE</p>
-		<input type="range" min="20" max="100" bind:value={done} class="range" step="5" on:change={reCalculateDone} />
+		<input type="range" min="1" max="100" bind:value={done} class="range" step="1" on:change={reCalculateDone} />
 		<div class="w-full flex justify-between text-xs px-2">
 			<span>Nothing this time😄</span>
 			<span>Little done</span>
