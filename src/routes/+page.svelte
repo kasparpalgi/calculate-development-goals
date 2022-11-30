@@ -67,7 +67,7 @@
 		>
 	</p>
 	<p>&nbsp;</p>
-	<p class="text-xl font-bold">PROJECT SIZE min: €{minCost} / max: €{maxCost}</p>
+	<p class="text-xl font-bold">PROJECT SIZE (average cost €{minCost} - €{maxCost})</p>
 	<input
 		type="range"
 		min="1"
