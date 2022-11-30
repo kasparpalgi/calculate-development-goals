@@ -4,6 +4,14 @@
 	let speed: number = 75;
 	let cost: number = 75;
 	let done: number = 75;
+	let minCost: number = 8000;
+	let maxCost: number = 15000;
+	let projectSize: number = 15;
+
+	function reCalculateSize() {
+		minCost = Math.round(270 * (projectSize * 2));
+		maxCost = Math.round(400 * (projectSize * 2.5));
+	}
 
 	function reCalculateQuality() {
 		tooMuch = (quality + speed + cost + done - 300) / 3;
@@ -58,7 +66,26 @@
 			>Agile Software Craftsmanship by Uncle Bob>></a
 		>
 	</p>
-	<div class="mx-20 my-8">
+	<p>&nbsp;</p>
+	<p class="text-xl font-bold">PROJECT SIZE min: €{minCost} / max: €{maxCost}</p>
+	<input
+		type="range"
+		min="1"
+		max="100"
+		bind:value={projectSize}
+		class="range"
+		step="1"
+		on:change={reCalculateSize}
+	/>
+	<div class="w-full flex justify-between text-xs px-2">
+		<span>Small</span>
+		<span>Medium</span>
+		<span>Bigger</span>
+		<span>Large</span>
+		<span>Enterprise</span>
+	</div>
+	<p>&nbsp;</p>
+	<div class="mx-5 my-8 md:mx-20">
 		<p class="text-xl font-bold">QUALITY</p>
 		<input
 			type="range"
@@ -77,7 +104,7 @@
 			<span>Clean</span>
 		</div>
 	</div>
-	<div class="mx-20 my-8">
+	<div class="mx-5 my-8 md:mx-20">
 		<p class="text-xl font-bold">SPEED</p>
 		<input
 			type="range"
@@ -96,7 +123,7 @@
 			<span>Fast</span>
 		</div>
 	</div>
-	<div class="mx-20 my-8">
+	<div class="mx-5 my-8 md:mx-20">
 		<p class="text-xl font-bold">PRICE</p>
 		<input
 			type="range"
@@ -108,14 +135,14 @@
 			on:change={reCalculateCost}
 		/>
 		<div class="w-full flex justify-between text-xs px-2">
-			<span>Enterprice</span>
-			<span>Very expensive</span>
-			<span>Expensive</span>
-			<span>Reasonable</span>
-			<span>Cheap</span>
+			<span>€{maxCost + (750 * 2)}</span>
+			<span>€{maxCost}</span>
+			<span>€{Math.round((minCost + maxCost)/1.7)}</span>
+			<span>€{(minCost + maxCost)/2}</span>
+			<span>€{minCost}</span>
 		</div>
 	</div>
-	<div class="mx-20 my-8">
+	<div class="mx-5 my-8 md:mx-20">
 		<p class="text-xl font-bold">DONE</p>
 		<input
 			type="range"
@@ -138,8 +165,11 @@
 	<p>
 		Move the knobs to define the optimal outcome considering the needs, budget and time you can
 		afford to wait. Click to see samples:<br />
-		<button on:click={sampleOne}  class="text-blue-500">SAMPLE1</button> - giving up a bit in speed, cost and what will be done to get a good quality. Good choise but expensive.
-		<br /> <button on:click={sampleTwo}  class="text-blue-500">SAMPLE2</button> - giving up a lot in speed but also in quality to get it damn cheap and everything completed - not a good choice but often this choice is the reality.
+		<button on:click={sampleOne} class="text-blue-500">SAMPLE1</button> - giving up a bit in speed,
+		cost and what will be done to get a good quality. Good choise but expensive.
+		<br /> <button on:click={sampleTwo} class="text-blue-500">SAMPLE2</button> - giving up a lot in speed
+		but also in quality to get it damn cheap and everything completed - not a good choice but often this
+		choice is the reality.
 	</p>
 	<p>&nbsp;</p>
 	<p>
