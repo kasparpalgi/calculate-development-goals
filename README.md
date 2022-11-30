@@ -1,18 +1,8 @@
-# create-svelte
+# Set Your Development Goals
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Customers and product owners often want all four from the following list of four qualities but you can pick only three. Or give up a little from all of them or any other combinations. That’s a fundamental law of any project (not just a software development project). Read more here: Agile Software Craftsmanship by Uncle Bob: https://medium.com/crewnew-com/agile-software-craftsmanship-by-uncle-bob-377882b3d8b
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Demo: https://calculate.crnw.uk
 
 ## Developing
 
