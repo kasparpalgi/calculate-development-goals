@@ -6,7 +6,7 @@ Live in server: https://calculate-development-goals.vercel.app/
 
 ## License
 
-Feel free to use however you wish but keep the footer link.
+Feel free to use however you wish but keep the footer link. Used TailwindCSS [template from @bradtraversy](https://github.com/bradtraversy/tailwind-landing-page) that I built into [SvelteKit template and included DaisyUI](https://github.com/crewnew-git/sveltekit-template).
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
