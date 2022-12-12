@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Line } from 'svelte-chartjs';
+
 	let tooMuch: number = 0;
 	let quality: number = 75;
 	let speed: number = 75;
@@ -51,6 +53,22 @@
 		cost = 100;
 		done = 95;
 	}
+	
+const labels = Utils.months({count: 7});
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'My First Dataset',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+const config = {
+  type: 'line',
+  data: data,
+};
 </script>
 
 <div class="px-6 mx-auto my-10 text-center">
@@ -155,6 +173,7 @@
 			<span>Compromises</span>
 			<span>All done</span>
 		</div>
+		<Line data={data} />
 	</div>
 	<p>&nbsp;</p>
 	<p>
