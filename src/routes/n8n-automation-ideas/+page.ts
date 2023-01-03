@@ -15,10 +15,13 @@ export async function load() {
     body: JSON.stringify({
       query: `
       query ServicehostAutomations {
-        sh_automations(order_by: {sort: asc}, where: {status: {_eq: "published"}}) {
+        sh_automations(order_by: {vote: desc}, where: {status: {_eq: "published"}}) {
+          id
           name
           description
+          description_short
           vote
+          difficulty
         }
       }
           `
