@@ -1,4 +1,10 @@
-# Set Your Development Goals
+# Blog post illustrative apps
+
+## N8N Automation ideas
+
+Vote and get ideas about automations for your personal life or business.
+
+## Set Your Development Goals
 
 Customers and product owners often want all four from the following list of four qualities but you can pick only three. Or give up a little from all of them or any other combinations. That’s a fundamental law of any project (not just a software development project). Read more here: Agile Software Craftsmanship by Uncle Bob: https://medium.com/crewnew-com/agile-software-craftsmanship-by-uncle-bob-377882b3d8b
 

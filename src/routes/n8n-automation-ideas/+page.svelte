@@ -12,7 +12,11 @@
 		friends/family at home. Votes are currently only by selected CrewNew core team members and some
 		colse friends. Improving this list actively and public voting will be opened soon🙂
 	</p>
-    <p class="my-2">Difficulty 🔧 usually 5-30min job, 🔧🔧 less than a hour, 🔧🔧🔧 few hours, 🔧🔧🔧🔧 few working days. First time there may be also some time spent on accounts registration and API key generations.</p>
+	<p class="my-2">
+		Difficulty 🔧 usually 5-30min job, 🔧🔧 less than a hour, 🔧🔧🔧 few hours, 🔧🔧🔧🔧 few working
+		days. First time there may be also some time spent on accounts registration and API key
+		generations.
+	</p>
 	{#each data.cms as page_content}
 		<p class="text-xl font-bold mt-10">
 			{page_content.name}
@@ -20,6 +24,9 @@
 		<p class="mt-1">
 			{#if page_content.description_short}
 				<p class="mt-1">{page_content.description_short}</p>
+			{/if}
+			{#if page_content.description}
+				<button></button>
 			{/if}
 			Upvotes: {page_content.vote}&nbsp;&nbsp;&nbsp;Difficulty: {#if page_content.difficulty === 1}
 				🔧
